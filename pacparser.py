@@ -87,7 +87,7 @@ class PACParser:
         if self.sh_exp_match(hostname, "*.local"):
             return {'type': 'DIRECT', 'condition': 'shExpMatch(*.local)', 'proxy': 'DIRECT'}
         
-        # Check if it's in private RFC IP ranges
+        # Check if it's in private IP ranges
         try:
             ip = self.dns_resolve(hostname)
             if ip:
